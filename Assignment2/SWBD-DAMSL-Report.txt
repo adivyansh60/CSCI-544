@@ -1,0 +1,35 @@
+Assignment 2 Report
+
+Name: Divyansh Aggarwal
+
+1. Describe how you evaluated your baseline and advanced features:
+
+Baseline:
+Manually splitted the data, moved 75% of data into train data directory and 25% of data into test data directory.
+
+Advanced:
+Kept the whole data into one directory only.
+Applied KFold Cross Validation with number of splits as both 4 and 5.
+
+2. Accuracy of baseline features during your evaluation:
+
+71.95%
+
+3. Describe your advanced feature set:
+
+In addition to the baseline feature sets, following feature sets were added:
+-If an utterance is not the first utterance
+-The first and last 'pos' and 'token' in a dialog utterance
+-All the words present in the Text field
+-Bigrams of the Text field
+-Counts for all the distinct 'pos' values in a dialog utterance
+-Length of Text field
+
+4. If you tried and rejected alternate advanced feature sets, please describe them:
+
+Tried adding Text trigrams as a feature but the accuracy decreased.
+
+5. Accuracy of advanced features was:
+
+76.21% (n_splits = 4)
+76.25% (n_splits = 5)
